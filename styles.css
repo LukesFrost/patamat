@@ -1,0 +1,249 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+    font-size: 2.5em;
+}
+
+h2 {
+    color: #555;
+    margin-bottom: 15px;
+    font-size: 1.5em;
+}
+/* controls */
+.controls {
+    background: #f5f5f5;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.control-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+}
+
+.control-group:last-child {
+    margin-bottom: 0;
+}
+
+.control-group label {
+    font-weight: 600;
+    color: #555;
+}
+
+.control-group input[type="number"] {
+    padding: 8px 12px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 100px;
+    transition: border-color 0.3s;
+}
+
+.control-group input[type="number"]:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+button {
+    padding: 10px 20px;
+    background: #667eea;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.1s;
+}
+
+button:hover {
+    background: #5568d3;
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+.reset-button {
+    background: #e74c3c;
+}
+
+.reset-button:hover {
+    background: #c0392b;
+}
+
+/* Filtry - checkboxy */
+.filters {
+    border-top: 1px solid #ddd;
+    padding-top: 15px;
+}
+
+.filters label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.filters input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+/* Zobrazení počtu */
+.count-display {
+    background: #e8f4f8;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 1.3em;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 25px;
+    border: 2px solid #3498db;
+}
+
+/* Kontejner pro figurky */
+.figures-container {
+    min-height: 200px;
+    padding: 20px;
+    background: #fafafa;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+/* Řádek s figurkami */
+.figure-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 20px;
+    padding: 15px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.figure-row:hover {
+    transform: scale(1.02);
+}
+
+/* Jednotlivé figurky */
+.figure {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    border: 3px solid transparent;
+    border-radius: 10px;
+    padding: 10px;
+    background: #fff;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.figure:hover {
+    transform: scale(1.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Rozšíření 2: Zvýraznění první figurky */
+.first-pat {
+    border-color: #e74c3c !important;
+    border-width: 5px;
+    box-shadow: 0 0 15px rgba(231, 76, 60, 0.5);
+}
+
+.first-mat {
+    border-color: #3498db !important;
+    border-width: 5px;
+    box-shadow: 0 0 15px rgba(52, 152, 219, 0.5);
+}
+
+/* Instrukce */
+.instructions {
+    background: #fff9e6;
+    padding: 20px;
+    border-radius: 10px;
+    border-left: 5px solid #f39c12;
+}
+
+.instructions ul {
+    list-style-position: inside;
+    color: #555;
+}
+
+.instructions li {
+    margin-bottom: 8px;
+    line-height: 1.6;
+}
+
+/* Responsivní design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.8em;
+    }
+    
+    .figure {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .figure-row {
+        gap: 15px;
+    }
+    
+    .control-group {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .control-group input[type="number"] {
+        width: 100%;
+    }
+    
+    button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 15px;
+    }
+    
+    .figure {
+        width: 80px;
+        height: 80px;
+    }
+}

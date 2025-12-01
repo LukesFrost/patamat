@@ -1,0 +1,16 @@
+# Node modules
+node_modules/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Build files
+*.js.map
+
+# Logs
+*.log

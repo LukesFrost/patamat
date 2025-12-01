@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pat a Mat - Figurky</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Pat a Mat - Cvičení s figurkami</h1>
+        <!-- ovládání-->
+        <div class="controls">
+            <div class="control-group">
+                <label for="pairs-input">Počet dvojic:</label>
+                <input type="number" id="pairs-input" min="1" value="10">
+                <button id="render-button">Vykreslit</button>
+                <button id="reset-button" class="reset-button">Reset</button>
+            </div>
+            
+            <!--checkboxy-->
+            <div class="control-group filters">
+                <label>
+                    <input type="checkbox" id="show-pat" checked>
+                    Zobrazit Pata
+                </label>
+                <label>
+                    <input type="checkbox" id="show-mat" checked>
+                    Zobrazit Mata
+                </label>
+            </div>
+        </div>
+        
+        <!-- Zobrazení počtu figurek -->
+        <div id="count-display" class="count-display">
+            Počet figurek: PAT (0), MAT (0)
+        </div>
+        
+        <!-- Kontejner pro figurky -->
+        <div id="figures-container" class="figures-container">
+            <!-- Zde se budou dynamicky vykreslovat figurky -->
+        </div>
+        
+        <div class="instructions">
+            <h2>Instrukce:</h2>
+            <ul>
+                <li>Zadejte počet dvojic figurek (výchozí: 10)</li>
+                <li>Klikněte na "Vykreslit" pro zobrazení figurek</li>
+                <li>Figurky s červeným okrajem = první Pat v řádku</li>
+                <li>Figurky s modrým okrajem = první Mat v řádku</li>
+                <li>Použijte checkboxy pro filtrování zobrazení</li>
+                <li>Tlačítko "Reset" vymaže všechny figurky</li>
+            </ul>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
