@@ -1,4 +1,4 @@
-let patCount: number = 0;
+    let patCount: number = 0;
 let matCount: number = 0;
 
 function renderFigures(): void {
